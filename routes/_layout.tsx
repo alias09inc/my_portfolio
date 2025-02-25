@@ -1,10 +1,16 @@
 import { PageProps } from "$fresh/server.ts";
+import Header from "../components/header.tsx";
 
-export default function Layout({ Component, state }: PageProps) {
+interface LayoutState {
+  currentPath: string;
+}
+
+export default function Layout(
+  { Component, state }: PageProps<unknown, LayoutState>,
+) {
   return (
     <div className="layout">
-      <div className="header">
-      </div>
+      <Header currentPath={state.currentPath} />
       <Component />
       <div className="footer">
       </div>

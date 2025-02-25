@@ -1,24 +1,10 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
-import { Handlers, PageProps } from "$fresh/server.ts";
-import Header from "../components/header.tsx";
-import { FunctionalComponent } from "preact/src/index.d.ts";
+import { PageProps } from "$fresh/server.ts";
 
-export const handler: Handlers = {
-  GET(req, ctx) {
-    const url = new URL(req.url);
-    return ctx.render({ currentPath: url.pathname });
-  },
-};
-
-const Home: FunctionalComponent<PageProps<{ currentPath: string }>> = (
-  { data },
-) => {
+const Home = () => {
   return (
-    <div>
-      <Header currentPath={data.currentPath} />
-      <h1>Welcom!</h1>
-    </div>
+    <>
+      <h1>Welcome to my HomePage</h1>
+    </>
   );
 };
 
