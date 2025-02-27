@@ -20,7 +20,7 @@ const Navbar: FunctionalComponent<{ currentPath: string }> = (
   { currentPath },
 ) => {
   return (
-    <nav className="flex space-x-4 p-4 bg-gray-100">
+    <nav className="flex space-x-4 p-4">
       <NavLink to="/" active={currentPath === "/"}>Home</NavLink>
       <NavLink to="/skills" active={currentPath === "/skills"}>Skills</NavLink>
       <NavLink to="/works" active={currentPath === "/works"}>
@@ -34,10 +34,12 @@ const Header: FunctionalComponent<{ currentPath: string }> = (
   { currentPath },
 ) => {
   return (
-    <header className="flex justify-between items-center p-4 bg-gray-100 shadow-md">
-      <div class='.lavishly-yours-regular'>aliAs Portfolio</div>
-      <Navbar currentPath={currentPath} />
-    </header >
+    <header className="justify-between sticky top-0 w-full bg-white/30 backdrop-filter backdrop-blur-md backdrop-brightness-100 backdrop-opacity-50">
+      <div className="flex">
+        <div class="text-4xl font-Tangerine">aliAs09.com</div>
+        <Navbar currentPath={currentPath} />
+      </div>
+    </header>
   );
 };
 

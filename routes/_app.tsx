@@ -9,7 +9,7 @@ export default function App({ Component }: PageProps) {
         <title>porfolio-deno</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
+      <body className="">
         <Component />
       </body>
     </html>
