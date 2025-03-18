@@ -1,5 +1,6 @@
 import { asset } from "$fresh/runtime.ts";
 import { FunctionalComponent } from "preact";
+import { GlassCard, GlassSection } from "./glassmorphism.tsx";
 
 const NavLink: FunctionalComponent<
   { to: string; children: string; active: boolean }
