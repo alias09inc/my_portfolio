@@ -109,3 +109,21 @@ export function GlassSection({
     </section>
   );
 }
+
+interface GlassShowcaseProps {
+  children: JSX.Element | JSX.Element[] | string;
+  className?: string;
+}
+
+export function GlassShowcase({
+  children,
+  className = "",
+}: GlassShowcaseProps) {
+  return (
+    <div class={`w-[80%] mx-auto ${className}`}>
+      <div class="backdrop-blur-md bg-white/10 rounded-3xl p-8 border border-white/20 shadow-xl mt-4">
+        {children}
+      </div>
+    </div>
+  );
+}
