@@ -10,12 +10,14 @@ export default function Layout(
   { Component, state }: PageProps<unknown, LayoutState>,
 ) {
   return (
-    <div className="layout">
-      <div className="">
-      <TriangleBackground/>
-      </div>
+    <div className="layout relative min-h-screen">
       <Header currentPath={state.currentPath} />
-      <Component />
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
+        <TriangleBackground/>
+      </div>
+      <div className="content pt-16">
+        <Component />
+      </div>
     </div>
   );
 }

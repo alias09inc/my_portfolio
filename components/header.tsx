@@ -35,9 +35,9 @@ const Header: FunctionalComponent<{ currentPath: string }> = (
   { currentPath },
 ) => {
   return (
-    <header className="justify-between sticky top-0 w-full bg-white/30 backdrop-filter backdrop-blur-md backdrop-brightness-100 backdrop-opacity-50">
-      <div className="flex justify-between">
-        <div class="text-4xl font-Tangerine content-center md:px-10">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-filter backdrop-blur-5xl backdrop-brightness-110 backdrop-opacity-90 shadow-sm">
+      <div className="flex justify-between max-w-7xl mx-auto">
+        <div class="text-4xl font-Tangerine content-center md:px-10 py-2">
           aliAs09.com
         </div>
         <Navbar currentPath={currentPath} />

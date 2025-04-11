@@ -9,5 +9,12 @@ export default {
       LavishlyYours: ["LavishlyYours", "serif"],
       Tangerine: ["Tangerine", "serif"],
     },
+    extend: {
+      backdropBlur: {
+        '3xl': '50px',
+        '4xl': '70px',
+        '5xl': '100px',
+      }
+    },
   },
 } satisfies Config;
